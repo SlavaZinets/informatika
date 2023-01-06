@@ -1,46 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slava Zinets</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./clock.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="./main.js" type="module"></script>
+  </head>
+  <body data-theme="dark">
     <header>
-       <div class="containerheader">
+      <div class="containerheader">
         <div class="logo">
-            <span>Slava</span>
+          <span>Годинник</span>
         </div>
         <ul class="navigation">
-            <li><a href="#aiImg" class="headerlink">AI</a></li>
-            <li><a href="#mlImg" class="headerlink">ML</a></li>
-            <li><a href="#annImg" class="headerlink">ANN</a></li>
-            <li><a href="#dlImg" class="headerlink">DL</a></li>
-            <li><a href="#bdImg" class="headerlink">BD</a></li>
-            <li><a href="#odlImg" class="headerlink">Online Learning</a></li>
-            <li><a href="#nftImg" class="headerlink">NFT</a></li>
+          <li><a href="#clockLink" class="headerlink">Віджет</a></li>
+          <li><a href="#infoLink" class="headerlink">Опис</a></li>
+          <li><a href="#codesLink" class="headerlink">Посилання</a></li>
         </ul>
-       </div>
+      </div>
     </header>
+
     <main>
-<ul class="container">
-    <li class="inovationItem inovationItem1"><div id="aiImg"></div><span>Штучний інтелект(AI)</span></li>
-    <li class="inovationItem"><div id="mlImg"></div>Машиннне навчання(ML)</span></li>
-    <li class="inovationItem inovationItem1"><div id="annImg"></div><span>Нецромережі(Artificial Neural Network)</span></li>
-    <li class="inovationItem"><div id="dlImg"></div><span>Глибинне навчання(DeepLearning)</span></li>
-    <li class="inovationItem inovationItem1"><div id="bdImg"></div><span>Великі дані(Big Data)</span></li>
-    <li class="inovationItem"><div id="odlImg"></div><span>Онлай та дистанційна освіта</span></li>
-    <li class="inovationItem inovationItem1"><div id="nftImg"></div><span>Криптовалюти (NFT)</span></li>
-</ul>
+      <section id="clockLink">
+        <div class="container">
+          <div class="clockSection">
+            <h3 class="sectionTitle">Віджет</h3>
+
+            <button class="makeVisibleBtn">Нажміть, щоб побачити</button>
+
+            <div class="hiddenContainer">
+                <div id="clock">
+                    <div class="clockCircle">
+                      <div class="dot hdot"></div>
+                      <svg class="circleProgress">
+                        <circle cx="71" cy="71" r="71"></circle>
+                        <circle id="circleHours" cx="71" cy="71" r="71"></circle>
+                      </svg>
+                      <div id="hours">00</div>
+                    </div>
+      
+                    <div class="clockCircle">
+                      <div class="dot mdot"></div>
+                      <svg class="circleProgress">
+                        <circle cx="71" cy="71" r="71"></circle>
+                        <circle id="circleMinutes" cx="71" cy="71" r="71"></circle>
+                      </svg>
+                      <div id="minutes">00</div>
+                    </div>
+      
+                    <div class="clockCircle">
+                      <div class="dot sdot"></div>
+                      <svg class="circleProgress">
+                        <circle cx="71" cy="71" r="71"></circle>
+                        <circle id="circleSeconds" cx="71" cy="71" r="71"></circle>
+                      </svg>
+      
+                      <div id="seconds">00</div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="infoLink">
+        <div class="container">
+          <div class="clockSection">
+            <h3 class="sectionTitle">Опис</h3>
+            <p class="infoPar">
+              За допогою спеціальної функції <i>Date()</i> ми отримуємо поточні
+              години хвилини та секунди і поміщаємо ці числа в змінні. Далі за
+              допомогою спеціальних формул розраховуємо кут нахилу, на який ми
+              повертаємо наші точки. Також вираховуємо до цих кутів відповідний
+              відсоток, на який повинні бути заповнені ободи кіл. Це
+              повторюється що секунди за допомогою функції <i>setInterval()</i>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="codesLink">
+        <div class="container">
+          <div class="clockSection">
+            <h3 class="sectionTitle">Посилання</h3>
+            <p>
+              Повний код цієї сторінки можна взяти на
+              <a class="sourseLink" href="">GitHub</a> або
+              <a href="" class="sourseLink">GoogleDisk</a>
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
+
     <footer>
-<span>Thanks for watching. By Slava Zinets. ;)</span>
+      <span>Дякую за перегляд! Автор: Зінець Вячеслав. ;)</span>
     </footer>
-</body>
+  </body>
 </html>
